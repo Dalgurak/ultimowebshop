@@ -1,0 +1,10 @@
+<div class="pvideo" id="video">
+	<div class="iframed" <?php echo ($this->getImage() ? 'style="background-image:url(/media/'.$this->getImage().'); position:absolute;left:0;margin:0 auto;background-repeat:'.$this->getBackrepeat().';text-align:center;width:100%;padding-top: 30px;padding-bottom:30px;"' : ''); ?>>
+	
+		<img src="/media/sharkhead.png" /><br />
+		<h4><?php echo $this->getTitle(); ?></h4>
+
+		<iframe width="900" height="500" src="<?php echo $this->getData('video'); ?>" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="clear"></div>
+</div>

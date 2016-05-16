@@ -1,0 +1,51 @@
+<?php
+
+$attributes = $this->getData('attributes');
+
+$attribs = array();
+$titles = explode(" ",$attributes);
+
+foreach($titles as $title) {
+	$separated = explode("#",$title);
+	$attrs = explode(",",$separated[1]);
+	$attribs[$separated[0]] = $attrs;
+}
+
+$_product = $this->getProduct();
+
+?>
+<style type="text/css">
+	#specs h4 { padding-top: 0; }
+</style>
+<div id="specs">
+	<h4>Specifikationer</h4>
+	<?php foreach($attribs as $title => $values) { ?>
+		<table class="specs">
+			<thead>
+				<tr>
+					<th colspan="2"><?php echo $title; ?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($values as $value) : ?>
+				<?php
+					$exists = $_product->offsetExists($value);
+					if ($exists) {
+					
+					$attr = $_product->getResource()->getAttribute($value);
+					$_label = $attr->getFrontendLabel();
+				?>
+				<tr>
+					<td width="30%">
+						<?php echo $_label; ?>
+					</td>
+					<td width="70%">
+						<?php echo $_product->getData($value); ?>
+					</td>
+				</tr>
+				<?php }
+					endforeach; ?>
+	<?php } ?>
+			</tbody>
+		</table>
+</div>

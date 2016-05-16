@@ -1,0 +1,354 @@
+<?xml version="1.0"?>
+<widgets>
+    <productdesc1 type="productdesc/widget_desc1" translate="name description" module="productdesc">
+        <name>Product Desc Block Right Image</name>
+        <description>Product Desc Block Right Image</description>
+        <parameters>
+            <title>
+                <label>Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>15</sort_order>
+            </title>
+            <anchor>
+                <label>Anchor</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>pd_right</value>
+                <sort_order>16</sort_order>
+            </anchor>
+            <text>
+                <label>Description</label>
+                <visible>1</visible>
+                <type>productdesc/widget_wysiwyg</type>
+                <sort_order>20</sort_order>
+            </text>
+            <fixquotes>
+                <label>fq</label>
+                <visible>1</visible>
+                <type>productdesc/widget_fixquotes</type>
+                <sort_order>21</sort_order>
+            </fixquotes>
+            <image>
+                <label>Image</label>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>30</sort_order>
+            </image>
+            <template>  
+                <visible>0</visible>  
+                <value>vconnect/productdesc/widget1_right_image.phtml</value>  
+            </template> 
+        </parameters>
+    </productdesc1>
+    <productdesc2 type="productdesc/widget_desc2" translate="name description" module="productdesc">
+        <name>Product Desc Block Left Image</name>
+        <description>Product Desc Block Left Image</description>
+        <parameters>
+            <title>
+                <label>Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>15</sort_order>
+            </title>
+            <anchor>
+                <label>Anchor</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>pd_left</value>
+                <sort_order>16</sort_order>
+            </anchor>
+            <text>
+                <label>Description</label>
+                <visible>1</visible>
+                <type>productdesc/widget_wysiwyg</type>
+                <sort_order>20</sort_order>
+            </text>
+            <fixquotes>
+                <label>fq</label>
+                <visible>1</visible>
+                <type>productdesc/widget_fixquotes</type>
+                <sort_order>21</sort_order>
+            </fixquotes>
+            <image>
+                <label>Image</label>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>30</sort_order>
+            </image>
+            <template>  
+                <visible>0</visible>  
+                <value>vconnect/productdesc/widget2_left_image.phtml</value>  
+            </template> 
+        </parameters>
+    </productdesc2>
+    <productdesc3 type="productdesc/widget_desc3" translate="name description" module="productdesc">
+        <name>Product Desc Block Reviews</name>
+        <description>Product Desc Block Reviews</description>
+        <parameters>
+            <reviews>
+                <label>Reviews</label>
+                <visible>1</visible>
+                <type>productdesc/widget_reviews</type>
+                <sort_order>10</sort_order>
+            </reviews>
+            <title>
+                <label>Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>15</sort_order>
+            </title>
+            <anchor>
+                <label>Anchor</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>pd_left</value>
+                <sort_order>16</sort_order>
+            </anchor>
+            <text>
+                <label>Description</label>
+                <visible>1</visible>
+                <type>productdesc/widget_wysiwyg</type>
+                <sort_order>20</sort_order>
+            </text>
+            <fixquotes>
+                <label>fq</label>
+                <visible>1</visible>
+                <type>productdesc/widget_fixquotes</type>
+                <sort_order>21</sort_order>
+            </fixquotes>
+            <template>  
+                <visible>0</visible>  
+                <value>vconnect/productdesc/widget3_reviews.phtml</value>  
+            </template> 
+        </parameters>
+    </productdesc3>
+    <productdesc4 type="productdesc/widget_desc4" translate="name description" module="productdesc">
+        <name>Product Desc Block Gallery</name>
+        <description>Product Desc Block Gallery</description>
+        <parameters>
+            <id_path translate="label">
+                <visible>1</visible>
+                <label>Product</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/catalog_product_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Product...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </id_path>
+            <title>
+                <label>Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>15</sort_order>
+            </title>
+            <anchor>
+                <label>Anchor</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>pd_left</value>
+                <sort_order>16</sort_order>
+            </anchor>
+            <text>
+                <label>Description</label>
+                <visible>1</visible>
+                <type>productdesc/widget_wysiwyg</type>
+                <sort_order>20</sort_order>
+            </text>
+            <fixquotes>
+                <label>fq</label>
+                <visible>1</visible>
+                <type>productdesc/widget_fixquotes</type>
+                <sort_order>21</sort_order>
+            </fixquotes>
+            <template>  
+                <visible>0</visible>  
+                <value>vconnect/productdesc/widget4_gallery.phtml</value>  
+            </template> 
+        </parameters>
+    </productdesc4>
+    <productdesc5 type="productdesc/widget_desc5" translate="name description" module="productdesc">
+        <name>Product Desc Block Nav</name>
+        <description>Product Desc Block Nav</description>
+        <parameters>
+            <id_path translate="label">
+                <visible>1</visible>
+                <label>Product</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/catalog_product_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Product...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </id_path>
+            <anchor>
+                <label>Anchor</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>pd_left</value>
+                <sort_order>16</sort_order>
+            </anchor>
+            <anchors>
+                <label>Anchors</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>KONFIGURER#konfig,SPECIFIKATIONER#specs,ANMELDELSER#reviews,BENCHMARKS#benchmarks,GALLERY#gallery</value>
+                <sort_order>20</sort_order>
+            </anchors>
+            <image>
+                <label>Image (Background)</label>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>30</sort_order>
+            </image>
+            <template>  
+                <visible>0</visible>  
+                <value>vconnect/productdesc/widget5_anchors.phtml</value>  
+            </template> 
+        </parameters>
+    </productdesc5>
+    <productdesc6 type="productdesc/widget_desc6" translate="name description" module="productdesc">
+        <name>Product Desc Block Video</name>
+        <description>Product Desc Video Nav</description>
+        <parameters>
+            <title>
+                <label>Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>15</sort_order>
+            </title>
+            <anchor>
+                <label>Anchor</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>pd_video</value>
+                <sort_order>16</sort_order>
+            </anchor>
+            <video>
+                <label>Video Embedded code</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>20</sort_order>
+            </video>
+            <image>
+                <label>Image (Background)</label>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>30</sort_order>
+            </image>
+            <backrepeat>
+                <label>Background repeat</label>
+                <visible>1</visible>
+                <type>text</type>
+                <default>no-repeat</default>
+                <comment>no-repeat, repeat, repeat-x, repeat-y, round, space</comment>
+                <sort_order>40</sort_order>
+            </backrepeat>
+            <template>  
+                <visible>0</visible>  
+                <value>vconnect/productdesc/widget6_video.phtml</value>  
+            </template> 
+        </parameters>
+    </productdesc6>
+    <productdesc7 type="productdesc/widget_desc7" translate="name description" module="productdesc">
+        <name>Product Desc Block Benchmarks</name>
+        <description>Product Desc Block Benchmarks</description>
+        <parameters>
+            <id_path translate="label">
+                <visible>1</visible>
+                <label>Product</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/catalog_product_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Product...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </id_path>
+            <title>
+                <label>Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>15</sort_order>
+            </title>
+            <anchor>
+                <label>Anchor</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>pd_benchmarks</value>
+                <sort_order>16</sort_order>
+            </anchor>
+            <image>
+                <label>Image (Background)</label>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>30</sort_order>
+            </image>
+            <template>  
+                <visible>0</visible>  
+                <value>vconnect/productdesc/widget7_benchmarks.phtml</value>  
+            </template> 
+        </parameters>
+    </productdesc7>
+    <productdesc8 type="productdesc/widget_desc8" translate="name description" module="productdesc">
+        <name>Product Desc Block Specifications</name>
+        <description>Product Desc Block Specifications</description>
+        <parameters>
+            <id_path translate="label">
+                <visible>1</visible>
+                <label>Product</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/catalog_product_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Product...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </id_path>
+            <title>
+                <label>Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>15</sort_order>
+            </title>
+            <anchor>
+                <label>Anchor</label>
+                <visible>1</visible>
+                <type>text</type>
+                <value>specs</value>
+                <sort_order>16</sort_order>
+            </anchor>
+            <attributes>
+                <label>Attributes</label>
+                <visible>1</visible>
+                <type>productdesc/widget_attributes</type>
+                <sort_order>10</sort_order>
+            </attributes>
+            <image>
+                <label>Image (Background)</label>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>30</sort_order>
+            </image>
+            <template>  
+                <visible>0</visible>  
+                <value>vconnect/productdesc/widget8_specs.phtml</value>  
+            </template> 
+        </parameters>
+    </productdesc8>
+</widgets>

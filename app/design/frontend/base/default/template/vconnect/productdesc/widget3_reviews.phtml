@@ -1,0 +1,40 @@
+<div class="previews" id="reviews">
+	<h4><?php echo $this->getData('title'); ?></h4>
+	<p><?php echo $this->getData('description'); ?></p>
+	<ul>
+	<?php
+
+	$reviews = explode(",",$this->getData('reviews'));
+
+	foreach($reviews as $review) :
+
+		$_review = Mage::getModel('review/review')->load($review);
+		echo '<li>';
+		$reviewImage = $_review->getReviewimage();
+		if ($reviewImage) {
+			echo '<img src="/media/reviewimages/'.$reviewImage.'" style="max-width: 300px;" /><br />';
+		} else {
+			echo '<img src="/media/reviews_placeholder.jpg" /><br />';
+		}
+		
+		echo '<span class="quote">"'.substr($_review->getDetail(),0,100) . '.."</span>';
+
+		$votesCollection = Mage::getModel('rating/rating_option_vote')
+			->getResourceCollection()
+			->setReviewFilter($review)
+			->setStoreFilter(Mage::app()->getStore()->getId())
+			->load();
+			
+		foreach( $votesCollection as $vote ) {
+			$ratings[] = $vote->getValue();
+		}
+
+		echo '<span class="title">'.$_review->getTitle() . '</span><span class="score">'.implode(' ', $ratings).'/10</span> ';
+		echo '<a href="#" class="more">L&AElig;S ANMELDELSE</a>' . '<br />';
+		echo '</li>';
+
+	endforeach;
+	?>
+	</ul>
+	<div class="clear"></div>
+</div>

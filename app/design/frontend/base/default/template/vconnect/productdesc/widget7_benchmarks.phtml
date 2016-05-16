@@ -1,0 +1,42 @@
+<?php
+$benchmarks = $this->loadBenchmarks();
+?>
+<div class="pbenchmarks" id="benchmarks">
+	<h4><?php echo $this->getTitle(); ?></h4>
+	<ul>
+	<?php foreach($benchmarks as $benchmark) : ?>
+		<li>
+			<h5><?php echo $benchmark->getTitle(); ?><span class="bsubtitle"> - <?php echo $benchmark->getSubtitle(); ?></span></h5>
+			<ul>
+				<li>
+					<?php foreach($this->getBitems($benchmark) as $bi) : ?>
+						<span class="label"><?php echo $bi->getTitle(); ?></span>
+						<div class="rate">
+							<?php echo $bi->getRate() ?> <?php echo $this->getRate($bi->getRateType()); ?>
+							<span class="filler" rel="<?php echo $this->getRateFiller($bi,$benchmark); ?>" style="width: 0%;">&nbsp;</span>
+						</div>
+					<?php endforeach; ?>
+				</li>
+			</ul>
+		</li>
+	<?php endforeach; ?>
+	</ul>
+</div>
+<script type="text/javascript">
+    var _konfOffset = null;
+    var triggered = false;
+
+    Event.observe(window, 'scroll', function() {
+
+        var viewport = document.viewport.getDimensions(); // Gets the viewport as an object literal
+        var width = viewport.width; // Usable window width
+        var height = viewport.height; // Usable window height
+
+        _konfOffset = $$('.pbenchmarks')[0].cumulativeOffset();
+
+        if (window.pageYOffset > (_konfOffset[1]-50) && window.pageYOffset < (_konfOffset[1]+400) && triggered == false) {
+			triggered = true;
+			$$('.filler').each(function(e){e.morph('width:'+e.readAttribute('rel')+'%;');});
+        }
+    });
+</script>

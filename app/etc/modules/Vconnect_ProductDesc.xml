@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vconnect_ProductDesc>
+            <active>true</active>
+            <codePool>community</codePool>
+            <version>0.1.0</version>
+            <depends>
+                <Mage_Core />
+                <Mage_Catalog />
+                <Mage_Adminhtml />
+            </depends>
+        </Vconnect_ProductDesc>
+    </modules>
+</config>
